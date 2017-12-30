@@ -16,6 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ConstraintLayoutActivity"
+            android:label="@string/title_activity_constraint_layout"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".TestActivity">
+        </activity>
     </application>
 
 </manifest>
