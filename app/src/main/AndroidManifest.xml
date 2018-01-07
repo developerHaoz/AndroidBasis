@@ -23,6 +23,10 @@
         </activity>
         <activity android:name=".TestActivity">
         </activity>
+        <activity android:name=".activitytest.LifeActivity">
+        </activity>
+        <activity android:name=".activitytest.AnotherActivity">
+        </activity>
     </application>
 
 </manifest>
