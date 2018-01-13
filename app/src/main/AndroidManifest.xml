@@ -18,17 +18,25 @@
         </activity>
         <activity android:name=".TestActivity">
         </activity>
-        <activity android:name=".activitytest.LifeActivity"
-            >
+        <activity android:name=".activitytest.LifeActivity">
+        </activity>
+        <activity
+            android:name=".activitytest.AnotherActivity"
+            android:launchMode="singleTask">
+        </activity>
+
+        <service
+            android:name=".servicetest.MyService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+
+        <activity android:name=".servicetest.ServiceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-        <activity android:name=".activitytest.AnotherActivity"
-            android:launchMode="singleTask"
-            >
         </activity>
     </application>
 
