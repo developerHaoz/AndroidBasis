@@ -15,6 +15,11 @@
             android:name=".ConstraintLayoutActivity"
             android:label="@string/title_activity_constraint_layout"
             android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
         <activity android:name=".TestActivity">
         </activity>
@@ -28,15 +33,14 @@
         <service
             android:name=".servicetest.MyService"
             android:enabled="true"
-            android:exported="true">
+            android:exported="true"
+            android:process=":remote"
+            >
         </service>
 
-        <activity android:name=".servicetest.ServiceActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+        <activity android:name=".servicetest.ServiceActivity"
+            android:parentActivityName=".ConstraintLayoutActivity"
+            >
         </activity>
     </application>
 

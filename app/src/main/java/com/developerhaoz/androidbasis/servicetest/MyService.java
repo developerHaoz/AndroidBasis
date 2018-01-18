@@ -1,20 +1,22 @@
 package com.developerhaoz.androidbasis.servicetest;
 
-import android.app.Notification;
-import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.os.Binder;
 import android.os.IBinder;
+import android.os.RemoteException;
 import android.util.Log;
-
-import com.developerhaoz.androidbasis.R;
 
 public class MyService extends Service {
 
     private static final String TAG = "MyService";
-    private DownloadBinder mBind = new DownloadBinder();
+
+    Service1AIDL.Stub mBinder = new Service1AIDL.Stub() {
+        @Override
+        public void AIDL_Service() throws RemoteException {
+            Log.d(TAG, "客户端通过 AIDL 与远程后台成功通信");
+        }
+    };
 
     class DownloadBinder extends Binder{
 
@@ -33,23 +35,12 @@ public class MyService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        return mBind;
+        return mBinder;
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        Intent intent = new Intent(this, ServiceActivity.class);
-        PendingIntent pi = PendingIntent.getActivity(this, 0, intent, 0);
-        Notification notification = new Notification.Builder(this)
-                .setContentTitle("This is content title")
-                .setContentText("This is content text")
-                .setWhen(System.currentTimeMillis())
-                .setSmallIcon(R.mipmap.ic_launcher)
-                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher))
-                .setContentIntent(pi)
-                .build();
-        startForeground(1, notification);
     }
 
     @Override

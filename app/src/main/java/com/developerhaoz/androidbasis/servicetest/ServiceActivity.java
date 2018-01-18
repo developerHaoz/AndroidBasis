@@ -1,6 +1,7 @@
 package com.developerhaoz.androidbasis.servicetest;
 
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
@@ -40,6 +41,11 @@ public class ServiceActivity extends AppCompatActivity {
         public void onServiceDisconnected(ComponentName name) {
         }
     };
+
+    public static void startActivity(Context context){
+        Intent intent = new Intent(context, ServiceActivity.class);
+        context.startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
