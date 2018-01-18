@@ -34,13 +34,14 @@
             android:name=".servicetest.MyService"
             android:enabled="true"
             android:exported="true"
-            android:process=":remote"
-            >
+            android:process=":remote">
         </service>
 
-        <activity android:name=".servicetest.ServiceActivity"
-            android:parentActivityName=".ConstraintLayoutActivity"
-            >
+        <activity
+            android:name=".servicetest.ServiceActivity"
+            android:parentActivityName=".ConstraintLayoutActivity">
+        </activity>
+        <activity android:name=".asynctasktest.AsyncTaskActivity">
         </activity>
     </application>
 
