@@ -24,7 +24,6 @@ public class ReceiverActivity extends AppCompatActivity {
         mIntentFilter = new IntentFilter();
         mIntentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
         mNetworkChangeReceiver = new NetworkChangeReceiver();
-        registerReceiver(mNetworkChangeReceiver, mIntentFilter);
     }
 
     @Override
