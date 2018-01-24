@@ -8,6 +8,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.developerhaoz.androidbasis.R;
@@ -17,6 +18,8 @@ public class ReceiverActivity extends AppCompatActivity {
     private IntentFilter mIntentFilter;
     private NetworkChangeReceiver mNetworkChangeReceiver;
 
+    private static final String TAG = "Receiver111";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +27,8 @@ public class ReceiverActivity extends AppCompatActivity {
         mIntentFilter = new IntentFilter();
         mIntentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
         mNetworkChangeReceiver = new NetworkChangeReceiver();
+        Log.d(TAG, "application: " + getApplication());
+        Log.d(TAG, "applicationContext: " + getApplicationContext());
     }
 
     @Override

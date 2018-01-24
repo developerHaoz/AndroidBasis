@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -20,6 +21,11 @@
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".TestActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
         <activity android:name=".activitytest.LifeActivity">
         </activity>
@@ -42,11 +48,6 @@
         <activity android:name=".asynctasktest.AsyncTaskActivity">
         </activity>
         <activity android:name=".broadcastreceivertest.ReceiverActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
 
         <receiver
