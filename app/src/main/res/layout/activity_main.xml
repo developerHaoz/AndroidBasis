@@ -14,12 +14,15 @@
         android:text="TextView"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_constraintLeft_creator="1"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="114dp"
-        app:layout_constraintVertical_bias="0.502"/>
+        app:layout_constraintRight_toLeftOf="@+id/textView2"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="47dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.707"/>
 
 
     <TextView
@@ -28,12 +31,10 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         tools:layout_constraintRight_creator="1"
-        android:layout_marginStart="106dp"
         android:layout_marginEnd="107dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView"
         tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1"
         android:layout_marginRight="107dp"/>
 
 
@@ -53,12 +54,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="27dp"
         app:layout_constraintLeft_toLeftOf="@+id/guideline3"
         android:layout_marginStart="27dp"
-        tools:layout_constraintBaseline_creator="1"
         app:layout_constraintBottom_toBottomOf="@+id/button3"
-        android:layout_marginBottom="0dp"/>
+        />
 
     <android.support.constraint.Guideline
         android:layout_width="wrap_content"
