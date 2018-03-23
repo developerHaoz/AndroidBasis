@@ -23,7 +23,6 @@ public class TestClass implements Callable<Integer>{
                 positionNotZero = i;
             }
         }
-
         Arrays.sort(inputArr);
         HashMap<String, Integer> hashMap = new HashMap();
         TestClass ctt = new TestClass();
